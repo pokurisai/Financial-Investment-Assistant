@@ -13,6 +13,7 @@ exports.sendEmail = function (userDetails, getPath, cb) {
     secureConnection: false,
     tls: { ciphers: 'SSLv3' }
   });
+  
   //readint the email
   // "../templates/signup.html"
   var getPath = path.join(__dirname, getPath);

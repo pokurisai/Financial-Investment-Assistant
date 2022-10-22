@@ -5,6 +5,8 @@ exports.createAccessToken = function (
     user,
     provider,
     callback,
+
+    
 ) {
     delete 
     jwt.sign(
