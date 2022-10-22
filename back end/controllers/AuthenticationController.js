@@ -3,7 +3,7 @@ const passport = require("passport"),
   LocalStrategy = require("passport-local").Strategy,
   jwtToken = require("jsonwebtoken"),
   JWT = require("../middleware/jwt");
-const User = require("../models/user")
+const User = require("../models/user");
 
 passport.use(
   new LocalStrategy(
@@ -13,52 +13,46 @@ passport.use(
       passReqToCallback: true,
     },
     function (req, account, password, done) {
-      User.findOne({email : account},
-        function (err, user) {
-          if (err) throw err;
-          if (!user) {
-            return done({
-              status : "Error",
-              statusCode: 401,
-              message: "Invalid account/password",
-              data : {}
-            });
-          } else {
-            User.comparePassword(
-              password,
-              user.password,
-              function (err, isMatch) {
-                if (err) {
-                  return done({
-                    status : "Error",
-                    statusCode: 401,
-                    message: err.message,
-                    data : {}
-                  });
-                }
-                if (isMatch) {
-                  JWT.createAccessToken(
-                    user,
-                    "local",
-                    function (err, result) {
-                      if (err) {
-                          console.log(err)
-                      } else {
-                        done(null, result);
-                      }
-                    },
-                  );
-                } else {
-                  return done({
-                    statusCode: 401,
-                    message: "Invalid account/password",
-                  });
-                }
+      User.findOne({ email: account }, function (err, user) {
+        if (err) throw err;
+        if (!user) {
+          return done({
+            status: "Error",
+            statusCode: 401,
+            message: "Invalid account/password",
+            data: {},
+          });
+        } else {
+          User.comparePassword(
+            password,
+            user.password,
+            function (err, isMatch) {
+              if (err) {
+                return done({
+                  status: "Error",
+                  statusCode: 401,
+                  message: err.message,
+                  data: {},
+                });
               }
-            );
-          }
-        },
-      );
+              if (isMatch) {
+                JWT.createAccessToken(user, "local", function (err, result) {
+                  if (err) {
+                    console.log(err);
+                  } else {
+                    done(null, result);
+                  }
+                });
+              } else {
+                return done({
+                  statusCode: 401,
+                  message: "Invalid account/password",
+                });
+              }
+            }
+          );
+        }
+      });
     }
   )
 );
@@ -68,9 +62,9 @@ passport.serializeUser(function (user, done) {
 });
 
 passport.deserializeUser(function (req, id, done) {
-  User.getUserById(id, function(err, user){
-    done(err, user)
-  })
+  User.getUserById(id, function (err, user) {
+    done(err, user);
+  });
 });
 
 passport.use(
