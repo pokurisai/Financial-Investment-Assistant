@@ -1,0 +1,43 @@
+html,body{
+    height: 100%;
+    }
+    .App {
+    background-image: url('../../asserts/bg1.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 730px;
+    }
+    .container{
+    height: 100%;
+    align-content: center;
+    }
+    .error {
+      color: red;
+    }
+    
+   .register .card{
+    height: 660px;
+    margin-top: auto;
+    margin-bottom: auto;
+    width: 400px;
+    background-color: rgba(0,0,0,0.5);
+    }
+    
+    .card-header h3{
+    color: white;
+    }
+    .login .btn {
+      margin-top: 20px;
+    }
+    .trade-100 .card{
+      margin-top: 3%;
+    }
+    .form-label {
+      color: #ffffff;
+    }
+    .profile__footer {
+      margin-top: 5%;
+    }
+    .field {
+      margin-bottom: 15px;
+    }

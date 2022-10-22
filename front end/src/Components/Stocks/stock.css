@@ -1,0 +1,496 @@
+/* Stock styles */
+  
+  /* Form */
+  #search-form-container form input[type='text'] {
+    width: 50%;
+    padding: 15px;
+    margin: 20px 0;
+    padding: 10px 30px;
+    border: none;
+    background: #f1f1f1;
+    text-align: center;
+  }
+  
+  .selected-holding input {
+    text-transform: uppercase;
+  }
+  ::-webkit-input-placeholder {
+    /* WebKit browsers */
+    text-transform: none;
+  }
+  :-moz-placeholder {
+    /* Mozilla Firefox 4 to 18 */
+    text-transform: none;
+  }
+  ::-moz-placeholder {
+    /* Mozilla Firefox 19+ */
+    text-transform: none;
+  }
+  :-ms-input-placeholder {
+    /* Internet Explorer 10+ */
+    text-transform: none;
+  }
+  ::placeholder {
+    /* Recent browsers */
+    text-transform: none;
+  }
+  
+  /* User Information */
+  .user-information {
+    border: blue 1px solid;
+  }
+  
+  /* User Holdings */
+  .holdings-container {
+    border: 2px red solid;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .holding-list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  
+  .holding-box {
+    border: 3px blue solid;
+  }
+  
+  /* Selected Holding */
+ .stock .card-head {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 10px;
+  }
+  
+  .stock .card-body {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .card-body > div {
+    padding: 10px;
+    width: 100%;
+  }
+  .card-body > div:nth-child(-n + 3) {
+    border-right: 2px solid rgba(0, 0, 0, 0.1);
+  }
+  .remove-border {
+    border: none !important;
+  }
+  
+  hr {
+    margin: 0 !important;
+  }
+  
+  .recommendation-header::before {
+    clear: both;
+    content: '';
+    display: block;
+    width: 50px;
+    height: 3px;
+    margin: 20px auto;
+    background: #007bff;
+  }
+  
+  /* Showcase Stocks */
+  .stocks-list {
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    flex-wrap: wrap;
+  }
+  .stock-box {
+    border: 3px solid red;
+    background-color: #333;
+    color: #fff;
+    width: 200px;
+    padding: 10px;
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 200px;
+  }
+  
+  .stocks-showcase {
+    height: 85vh;
+  }
+  
+  .showcase-header {
+    text-align: center;
+  }
+  
+  .stock-buttons {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .details-stock-btn {
+    background: rgb(182, 125, 125);
+  }
+  
+  /* Modal Buy */
+  .modal-buy {
+    background-color: #fefefe;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 50%;
+  }
+  
+  .buy-content {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    height: 100%;
+  }
+  
+  .buy-buttons {
+    display: flex;
+    justify-content: flex-end;
+    gap: 2rem;
+  }
+  
+  .buy-btn,
+  .close-btn {
+    background-color: #4caf50;
+    padding: 14px 20px;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .buy-btn {
+    background: #007bff;
+  }
+  
+  .close-btn {
+    background: #6c757d;
+  }
+  
+  .buy-form input {
+    text-align: center;
+    padding: 10px;
+    border-radius: 10px;
+    border: 2px solid #000;
+    width: 25%;
+    font-size: 25px;
+  }
+  
+  .alert {
+    animation: fadein 1s;
+    -moz-animation: fadein 1s; /* Firefox */
+    -webkit-animation: fadein 1s; /* Safari and Chrome */
+    -o-animation: fadein 1s; /* Opera */
+  }
+  
+  @keyframes fadein {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  
+  /* Confirm */
+  
+  .confirm-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    margin-top: 30px;
+    height: 100vh;
+  }
+  
+  .confirm-content {
+    display: flex;
+    flex-direction: column;
+    gap: 1.3rem;
+    align-items: center;
+  }
+  
+  .confirm-content > div {
+    text-align: center;
+  }
+  
+  .confirm-content hr {
+    box-sizing: content-box;
+    height: 0;
+    overflow: visible;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    border: 0;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    width: 500px;
+  }
+  
+  .confirm-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+  }
+  
+  .confirm-buttons button {
+    color: #fff;
+    padding: 8px 80px;
+  }
+  
+  .btn-confirm {
+    background: green;
+  }
+  
+  .btn-cancel {
+    background: red;
+  }
+
+
+  .recommend-header::before {
+    clear: both;
+    content: '';
+    display: block;
+    width: 50px;
+    height: 3px;
+    margin: 20px auto;
+    background: #007bff;
+  }
+  
+  .text-primary {
+    color: #28a745;
+  }
+  
+  .text-secondary {
+    color: #0284d0;
+  }
+  
+  .red {
+    color: red;
+  }
+  
+  .green {
+    color: green;
+  }
+  
+  .btn:hover {
+    opacity: 0.9;
+  }
+  
+  .flex-items {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    text-align: center;
+    height: 100%;
+  }
+  
+  .flex-items > div {
+    padding: 20px;
+  }
+  
+  ul {
+    list-style: none;
+  }
+  
+  a {
+    text-decoration: none;
+  }
+  
+  h1,
+  h2 {
+    font-weight: 300;
+    line-height: 1.2;
+  }
+  
+  p {
+    margin: 10px 0;
+  }
+  
+  .show {
+    display: block;
+  }
+  
+  .hidden {
+    display: none;
+  }
+  
+  /* flex properties */
+  .flexbox-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .spinner {
+      position: fixed;
+      right: 50%;
+      width: 50px !important;
+      height: 50px !important;
+  }
+  
+  /* Navbar */
+  .navbar-nav a:hover {
+    color: red;
+    text-decoration: none;
+  }
+  
+  .navbar {
+    font-size: 1.1em;
+  }
+  
+  .current {
+    border-bottom: black solid 2px;
+  }
+  
+  a:hover {
+    color: red;
+  }
+  
+  /* PORTFOLIO */
+  .user-holdings-list::before {
+    clear: both;
+    content: '';
+    display: block;
+    width: 50px;
+    height: 3px;
+    margin: 40px auto;
+    background: #007bff;
+  }
+  
+  .portfolio-container {
+    font-size: 1.2em;
+  }
+  
+  .portfolio-container canvas {
+      width: 675px !important;
+      height: 310px !important;
+  }
+  
+  .trade-container canvas {
+    height: 460px !important;
+    width: 1000px !important;
+    margin: 10px auto 0 auto;
+  }
+  
+  .card {
+    border: 2px solid rgba(0,0,0,.125) !important;
+  }
+  
+  /* Register */
+  /* The Modal (background) */
+  .modal {
+    display: block; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0, 0, 0); /* Fallback color */
+    background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
+  }
+  
+  /* Modal Content */
+  .modal-content {
+    background-color: #fefefe;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+  }
+  
+  /* Form signup */
+  * {
+    box-sizing: border-box;
+  }
+  
+  input[type="text"]:focus,
+  input[type="password"]:focus {
+    background-color: #ddd;
+    outline: none;
+  }
+  
+  .cancelbtn,
+  .signupbtn {
+    background-color: #4caf50;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    opacity: 0.9;
+  }
+  
+  button:hover {
+    opacity: 1;
+  }
+  
+  /* Extra styles for the cancel button */
+  .cancelbtn {
+    padding: 14px 20px;
+    background-color: #f44336;
+  }
+  
+  /* Float cancel and signup buttons and add an equal width */
+  .cancelbtn,
+  .signupbtn {
+    float: left;
+    width: 50%;
+  }
+  
+  .close {
+    color: #aaaaaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+  }
+
+  .holding-wrapper .form-control{
+    width: 81%;
+    float: left;
+    margin-right: 10px;
+  }
+  .card-buttons .btn-outline-primary {
+    margin: 0px 10px;
+  }
+  .stock-container {
+    padding-bottom: 5%;
+  }
+  .stock-container .value {
+    width: 50%;
+    float: left;
+    margin-right: 10px;
+  }
+  .stock-container .prior {
+    width: 20%;
+    float: left;
+    margin-right: 10px;
+  } 
+  .stock-container .liquidity {
+    width: 10%;
+    float: left;
+    margin-right: 10px;
+  }
+  .stock-container .filter {
+    width: 100%;
+    float: left;
+    background: #ababab;
+    padding: 0px 20px 20px;
+    margin-bottom: 10px;
+}
+.filter-btn {
+  margin-top: 23px;
+}

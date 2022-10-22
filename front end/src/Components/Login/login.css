@@ -1,0 +1,67 @@
+html,body{
+    height: 100%;
+    }
+    .profile__form {
+      width: 100%;
+    }
+    .App {
+    background-image: url('../../asserts/bg1.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 730px;
+    }
+    .container{
+    height: 100%;
+    align-content: center;
+    }
+    .t-links {
+      color: #ffffff;
+    }
+    .error {
+      color: red;
+    }
+    
+    .login .card{
+    height: 370px;
+    margin-top: auto;
+    margin-bottom: auto;
+    width: 400px;
+    background-color: rgba(0,0,0,0.5);
+    }
+    
+    .card-header h3{
+    color: white;
+    }
+    .login .btn {
+      margin-top: 20px;
+    }
+    .trade-100 .card{
+      margin-top: 10%;
+    }
+    .form-label {
+      color: #ffffff;
+    }
+    .profile__footer {
+      margin-top: 5%;
+    }
+    .field {
+      margin-bottom: 15px;
+    }
+    .steps h3{
+      color: #ffffff;
+    }
+    .steps ul li {
+      color: #ffffff;
+      list-style-type: auto;
+    }
+    .steps .title {
+      color: #ffffff;
+      font-size: 18px;
+    }
+    .steps-wrapper {
+      width: 80%;
+      float: left;
+      margin-top: 5%;
+      padding: 15px;
+      background: rgba(0,0,0,0.5);
+    }

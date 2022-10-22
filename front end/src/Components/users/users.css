@@ -1,0 +1,31 @@
+.users .card{
+    height: auto;
+    background: none;
+    margin: 15px;
+    display: inline-block;
+}
+.activate {
+    margin-left: 10px;
+}
+.users-title {
+    border-bottom: 2px solid rgba(0,0,0,.125);
+    margin: 15px;
+}
+.user-update .profile__footer {
+    margin: 0px;
+}
+.user-update .update {
+    margin: 5px 0px;
+    padding: 5px 0px;
+    border-bottom: 2px solid rgba(0,0,0,.125);
+}
+.user-update .upload-field {
+    width: 50%;
+    float: left;
+}
+.user-update .upload.profile__footer {
+    width: 46%;
+    float: left;
+    margin-top: 32px;
+    margin-left: 10px;
+}

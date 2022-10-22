@@ -1,0 +1,7 @@
+.nav-item a, .logo{
+ color: #fff;
+ text-decoration: none;
+}
+.nav-item {
+    margin: 0px 10px;
+}
